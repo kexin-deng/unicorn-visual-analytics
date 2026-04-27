@@ -4,6 +4,7 @@
 **Date:** May 2024  
 
 ---
+## Website Link: [unicorn-visual-analytics.vercel.app](https://unicorn-visual-analytics.vercel.app/)
 
 ## 📌 Overview
 
@@ -37,7 +38,7 @@ The dataset is sourced from Kaggle and contains over **1,200 unicorn companies**
 - Country and city  
 - Industry  
 
-This structured dataset enables both categorical and quantitative analysis. :contentReference[oaicite:0]{index=0}
+This structured dataset enables both categorical and quantitative analysis.
 
 ---
 
