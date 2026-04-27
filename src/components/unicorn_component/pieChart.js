@@ -15,9 +15,7 @@ function PieChart(props) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const data = await d3.csv(
-          "https://gist.githubusercontent.com/Linjing9/6de4a73f5b6a65c3bb348950ed0e5533/raw/50add5d93b5302cfdd76b04089742c29e5b1cedb/piechart.csv"
-        );
+        const data = await d3.csv("/data/unicorns.csv");
         setData(data);
         setLoading(false);
       } catch (error) {

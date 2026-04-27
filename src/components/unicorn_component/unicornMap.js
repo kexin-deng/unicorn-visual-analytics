@@ -13,11 +13,11 @@ function UnicornMap(props) {
     const fetchData = async () => {
       try {
         const worldMapData = await d3.json(
-          "https://gist.githubusercontent.com/hogwild/26558c07f9e4e89306f864412fbdba1d/raw/5458902712c01c79f36dc28db33e345ee71487eb/countries.geo.json"
+          "/data/countries.geo.json"
         );
 
         const unicornData = await d3.csv(
-          "https://gist.githubusercontent.com/Programming-git/9df9d14a10cf8dd0c58970c71c89ff54/raw/4e0765c0634fb9bdfb22adeadb97a5b722b74c24/unicorn_country_map_manipulated.csv"
+          "/data/unicorn_country_map_manipulated.csv"
         );
 
         renderMap(worldMapData, unicornData); // Render the map once data is fetched

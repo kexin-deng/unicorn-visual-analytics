@@ -8,13 +8,13 @@ function IndustryTree(props) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("https://gist.githubusercontent.com/Programming-git/2a7b6d09e6e628be55708cd1c9a32f1e/raw/b61d8418402fd625d683b994483311c54c3112ee/unicorn_original.csv");
+        const response = await fetch("/data/unicorns.csv");
         const csvData = await response.text();
         const data = d3.csvParse(csvData);
         // Parse CSV data
         const parsedData = data.map(item => ({
           Company: item.Company,
-          Valuation: parseFloat(item['Valuation ($B)'].replace('$', '').replace(',', '')),
+          Valuation: parseFloat(item.Valuation.replace('$', '').replace(',', '')),
           Country: item.Country,
           Industry: item.Industry
         }));
@@ -154,4 +154,3 @@ function IndustryTree(props) {
 }
 
 export { IndustryTree };
-

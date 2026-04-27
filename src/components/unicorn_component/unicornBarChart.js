@@ -16,7 +16,7 @@ function TopCompaniesChart(props) {
         const fetchData = async () => {
             try {
                 const data = await d3.csv(
-                    "https://gist.githubusercontent.com/Linjing9/133d453b525010219435770734e5f6f6/raw/88926cecdbd7a8d5ae43357eec3c1fd067c31fad/barchart.csv",
+                    "/data/unicorns.csv",
                     // Converter function to ensure Valuation is treated as a number
                     d => ({
                         ...d,

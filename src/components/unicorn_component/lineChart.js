@@ -12,9 +12,7 @@ function LineChart({ width, height }) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(
-          "https://gist.githubusercontent.com/Linjing9/513b600042d7d9e4120922e9c4508c12/raw/203e2c7e64cb97f2a424ca0a70fd312ce2d0a7c4/linechart.csv"
-        );
+        const response = await fetch("/data/linechart.csv");
         const csvData = await response.text();
         const parsedData = d3.csvParse(csvData, d => ({
           date: new Date(d.date),
